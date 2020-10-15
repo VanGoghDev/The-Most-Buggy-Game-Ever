@@ -11,9 +11,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/Models/Abilities.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Models/Interfaces/IPlayableEntity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Models/PlayableEntity.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/JumpCollectible.cs" />
       </list>
     </option>
   </component>
@@ -56,7 +57,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602762364962</updated>
-      <workItem from="1602762375786" duration="8649000" />
+      <workItem from="1602762375786" duration="10058000" />
     </task>
     <servers />
   </component>

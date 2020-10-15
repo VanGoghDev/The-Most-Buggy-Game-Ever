@@ -18,6 +18,7 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="JumpCollectible.cs" t="Include" />
           <e p="Models" t="Include">
             <e p="Abilities.cs" t="Include" />
             <e p="Interfaces" t="Include">
