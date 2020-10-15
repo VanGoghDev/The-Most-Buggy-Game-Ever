@@ -10,7 +10,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/Assets/Scripts/Models/Abilities.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Models/Interfaces/IPlayableEntity.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Models/PlayableEntity.cs" />
       </list>
     </option>
   </component>
@@ -53,7 +56,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602762364962</updated>
-      <workItem from="1602762375786" duration="302000" />
+      <workItem from="1602762375786" duration="8649000" />
     </task>
     <servers />
   </component>
@@ -64,5 +67,11 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="788" y="205" key="RiderGenerateDialog" timestamp="1602781248425">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="788" y="205" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602781248425" />
   </component>
 </project>

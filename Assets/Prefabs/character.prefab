@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8308284457281028431}
   - component: {fileID: 8308284457281028426}
   - component: {fileID: 8308284457281028429}
-  - component: {fileID: 8308284457281028427}
+  - component: {fileID: 1945980112}
   m_Layer: 0
   m_Name: character
   m_TagString: Untagged
@@ -97,7 +97,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 60
+  m_Mass: 40
   m_LinearDrag: 4.16
   m_AngularDrag: 0.05
   m_GravityScale: 9.8
@@ -132,7 +132,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5843779, y: 0.9254012}
   m_EdgeRadius: 0
---- !u!114 &8308284457281028427
+--- !u!114 &1945980112
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,11 +144,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bae6f18a38bbc5419eca908b7f628ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 6.95
-  MaxHealt: 10
-  TimeInvincible: 10
-  JumpForce: 0.5
-  groundLayer:
+  GroundLayer:
     serializedVersion: 2
     m_Bits: 256
-  jumpTime: 0.6
+  Speed: 10
+  JumpForce: 10
+  JumpTime: 0.7
