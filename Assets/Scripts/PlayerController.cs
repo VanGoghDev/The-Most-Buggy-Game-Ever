@@ -10,14 +10,14 @@ public class PlayerController : PlayableEntity
     [HideInInspector]
     public Abilities abilities;
 
-    void Start()
+    private void Start()
     {
         Rigidbody2D = transform.GetComponent<Rigidbody2D>();
         BoxCollider2D = transform.GetComponent<BoxCollider2D>();
         abilities = gameObject.AddComponent<Abilities>();
     }
 
-    void Update()
+    private void Update()
     {
         Horizontal = Input.GetAxis("Horizontal");
         if (abilities.JumpAbility)
@@ -30,8 +30,13 @@ public class PlayerController : PlayableEntity
         MoveHorizontal();
     }
 
-    public void SetJumpAbility(bool statement)
+    public void SetJumpAbility(bool statement, float jumpForceFromTrigger, float jumpTimeFromTrigger)
     {
         abilities.JumpAbility = statement;
+        jumpForce = jumpForceFromTrigger;
+        jumpTime = jumpTimeFromTrigger;
+        Debug.Log(abilities.JumpAbility);
+        Debug.Log(jumpTime);
+        Debug.Log(jumpForce);
     }
 }

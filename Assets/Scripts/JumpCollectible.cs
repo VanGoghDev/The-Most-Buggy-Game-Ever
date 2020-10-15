@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class JumpCollectible : MonoBehaviour
 {
+    public float jumpForce;
+    public float jumpTime;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -22,8 +25,7 @@ public class JumpCollectible : MonoBehaviour
         PlayerController player = other.GetComponent<PlayerController>();
         if (player != null)
         {
-            
-            player.SetJumpAbility(true);
+            player.SetJumpAbility(true, jumpForce, jumpTime);
         }
     }
 }

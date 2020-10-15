@@ -5,7 +5,7 @@ namespace Models
 {
     public class PlayableEntity: MonoBehaviour, IPlayableEntity
     {
-        public LayerMask GroundLayer;
+        public LayerMask groundLayer;
         protected BoxCollider2D BoxCollider2D { get; set; }
         protected Rigidbody2D Rigidbody2D { get; set; }
         protected float Horizontal { get; set; }
@@ -28,7 +28,7 @@ namespace Models
         {
             float extraHeightText = 0.05f;
             RaycastHit2D raycastHit2D = Physics2D.BoxCast(BoxCollider2D.bounds.center, BoxCollider2D.bounds.size, 
-                0, Vector2.down, extraHeightText, GroundLayer);
+                0, Vector2.down, extraHeightText, groundLayer);
             return raycastHit2D.collider != null;
         }
 
