@@ -43,14 +43,14 @@ namespace Models
 
         public void Jump()
         {
-            if (IsGrounded() && Input.GetKeyDown(KeyCode.Space))
+            if (IsGrounded() && Input.GetKeyDown(KeyCode.W))
             {
                 Rigidbody2D.velocity = new Vector2(Rigidbody2D.velocity.x, jumpForce);
                 IsJumping = true;
                 JumpTimeCounter = jumpTime;
             }
 
-            if (Input.GetKey(KeyCode.Space) && IsJumping)
+            if (Input.GetKey(KeyCode.W) && IsJumping)
             {
                 if (JumpTimeCounter > 0)
                 {
