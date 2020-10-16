@@ -63,7 +63,7 @@ namespace Models
                 }
             }
 
-            if (Input.GetKeyUp(KeyCode.Space))
+            if (Input.GetKeyUp(KeyCode.W))
             {
                 IsJumping = false;
             }
