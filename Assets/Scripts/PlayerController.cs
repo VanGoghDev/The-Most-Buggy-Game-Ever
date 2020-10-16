@@ -66,10 +66,9 @@ public class PlayerController : MonoBehaviour
     }
     
     void moveCharacter(float horizontal) {
-        rb.velocity = new Vector2(moveSpeed * horizontal, rb.velocity.y);
-
+        //rb.velocity = new Vector2(moveSpeed * horizontal, rb.velocity.y);
         
-        // rb.AddForce(Vector2.right * horizontal * moveSpeed);
+        rb.AddForce(Vector2.right * horizontal * moveSpeed);
         //
         // if ((horizontal > 0 && !facingRight) || (horizontal < 0 && facingRight)) {
         //     //Flip();
