@@ -34,6 +34,8 @@ public class PlayerController : MonoBehaviour
     public float groundLength = 0.6f;
     public Vector3 colliderOffset;
 
+    private float horizontal;
+    
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -62,15 +64,19 @@ public class PlayerController : MonoBehaviour
 
         modifyPhysics();
     }
+    
     void moveCharacter(float horizontal) {
-        rb.AddForce(Vector2.right * horizontal * moveSpeed);
+        rb.velocity = new Vector2(moveSpeed * horizontal, rb.velocity.y);
 
-        if ((horizontal > 0 && !facingRight) || (horizontal < 0 && facingRight)) {
-            Flip();
-        }
-        if (Mathf.Abs(rb.velocity.x) > maxSpeed) {
-            rb.velocity = new Vector2(Mathf.Sign(rb.velocity.x) * maxSpeed, rb.velocity.y);
-        }
+        
+        // rb.AddForce(Vector2.right * horizontal * moveSpeed);
+        //
+        // if ((horizontal > 0 && !facingRight) || (horizontal < 0 && facingRight)) {
+        //     //Flip();
+        // }
+        // if (Mathf.Abs(rb.velocity.x) > maxSpeed) {
+        //     rb.velocity = new Vector2(Mathf.Sign(rb.velocity.x) * maxSpeed, rb.velocity.y);
+        // }
         //animator.SetFloat("horizontal", Mathf.Abs(rb.velocity.x));
         //animator.SetFloat("vertical",rb.velocity.y);
     }
@@ -100,10 +106,10 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-    void Flip() {
-        facingRight = !facingRight;
-        transform.rotation = Quaternion.Euler(0, facingRight ? 0 : 180, 0);
-    }
+    // void Flip() {
+    //     facingRight = !facingRight;
+    //     transform.rotation = Quaternion.Euler(0, facingRight ? 0 : 180, 0);
+    // }
     IEnumerator JumpSqueeze(float xSqueeze, float ySqueeze, float seconds) {
         Vector3 originalSize = Vector3.one;
         Vector3 newSize = new Vector3(xSqueeze, ySqueeze, originalSize.z);

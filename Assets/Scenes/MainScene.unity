@@ -3287,6 +3287,22 @@ PrefabInstance:
       propertyPath: characterHolder
       value: 
       objectReference: {fileID: 1514496735}
+    - target: {fileID: 1945980112, guid: 09980ec4ace519040a94dfce61a247ec, type: 3}
+      propertyPath: jumpSpeed
+      value: 7.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 1945980112, guid: 09980ec4ace519040a94dfce61a247ec, type: 3}
+      propertyPath: moveSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308284457281028426, guid: 09980ec4ace519040a94dfce61a247ec, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308284457281028426, guid: 09980ec4ace519040a94dfce61a247ec, type: 3}
+      propertyPath: m_LinearDrag
+      value: 10.82
+      objectReference: {fileID: 0}
     - target: {fileID: 8308284457281028428, guid: 09980ec4ace519040a94dfce61a247ec, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.008
