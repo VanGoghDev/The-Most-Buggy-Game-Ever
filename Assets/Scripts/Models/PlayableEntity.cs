@@ -77,7 +77,7 @@ namespace Models
     }
 
         protected void Jump(float horizontal){
-        rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y);
+        rb.velocity = new Vector2(rb.velocity.x / 2, 0);
         rb.AddForce(Vector2.up * jumpSpeed, ForceMode2D.Impulse);
         // rb.AddForce(Vector2.right * horizontal * moveSpeed / 5, ForceMode2D.Impulse);
         jumpTimer = 0;
@@ -96,7 +96,7 @@ namespace Models
             rb.gravityScale = 0;
         }else{
             rb.gravityScale = gravity;
-            rb.drag = linearDrag * 0.15f;
+            rb.drag = linearDrag * 0.05f;
             if(rb.velocity.y < 0){
                 rb.gravityScale = gravity * fallMultiplier;
             }else if(rb.velocity.y > 0 && !Input.GetButton("Jump")){
