@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0935352-9277-47c3-b600-7a5307e13a8c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.The most buggy game ever/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.The most buggy game ever/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Models/PlayableEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Models/PlayableEntity.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +66,7 @@
       <workItem from="1602794058792" duration="1598000" />
       <workItem from="1602878710374" duration="3723000" />
       <workItem from="1602883579747" duration="288000" />
-      <workItem from="1602929601463" duration="6567000" />
+      <workItem from="1602929601463" duration="6873000" />
     </task>
     <servers />
   </component>
