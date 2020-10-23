@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d0935352-9277-47c3-b600-7a5307e13a8c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.The most buggy game ever/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.The most buggy game ever/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Tree.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Tree.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Models/PlayableEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Models/PlayableEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +19,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Models/Abilities.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Models/Interfaces/IPlayableEntity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/JumpCollectible.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Models/PlayableEntity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Models/PlayableEntity.cs" />
       </list>
     </option>
   </component>

@@ -43,7 +43,7 @@ namespace Models
 
         public void Jump()
         {
-            if (IsGrounded() && Input.GetKeyDown(KeyCode.W))
+            if (IsGrounded() && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown("joystick button 0")))
             {
                 Rigidbody2D.velocity = new Vector2(Rigidbody2D.velocity.x, jumpForce);
                 IsJumping = true;
@@ -54,7 +54,8 @@ namespace Models
             {
                 if (JumpTimeCounter > 0)
                 {
-                    Rigidbody2D.velocity = new Vector2(Rigidbody2D.velocity.x, jumpForce);
+                    //Rigidbody2D.velocity = new Vector2(Rigidbody2D.velocity.x, jumpForce);
+                    Rigidbody2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
                     JumpTimeCounter -= Time.deltaTime;
                 }
                 else
