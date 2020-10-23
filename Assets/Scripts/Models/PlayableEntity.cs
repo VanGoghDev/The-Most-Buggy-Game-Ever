@@ -64,7 +64,8 @@ namespace Models
         protected void MoveCharacter(float horizontal) {
         //rb.velocity = new Vector2(moveSpeed * horizontal, rb.velocity.y);
         
-        rb.AddForce(Vector2.right * horizontal * moveSpeed);
+        //rb.AddForce(Vector2.right * horizontal * moveSpeed);
+        rb.velocity = new Vector2(moveSpeed * horizontal, rb.velocity.y);
         
         if ((horizontal > 0 && !facingRight) || (horizontal < 0 && facingRight)) {
             Flip();
