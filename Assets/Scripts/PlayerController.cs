@@ -15,19 +15,21 @@ public class PlayerController : PlayableEntity
         Rigidbody2D = transform.GetComponent<Rigidbody2D>();
         BoxCollider2D = transform.GetComponent<BoxCollider2D>();
         abilities = gameObject.AddComponent<Abilities>();
+        abilities.JumpAbility = true;
     }
 
     private void Update()
     {
         Horizontal = Input.GetAxis("Horizontal");
+        MoveHorizontal();
+        Debug.Log(abilities.JumpAbility);
         if (abilities.JumpAbility)
             Jump();
     }
 
     private void FixedUpdate()
     {
-        Horizontal = Input.GetAxis("Horizontal");
-        MoveHorizontal();
+        
     }
 
     public void SetJumpAbility(bool statement, float jumpForceFromTrigger, float jumpTimeFromTrigger)
