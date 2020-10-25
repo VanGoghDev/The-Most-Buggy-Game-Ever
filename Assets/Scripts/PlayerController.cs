@@ -25,7 +25,12 @@ public class PlayerController : MonoBehaviour
     private bool IsJumping { get; set; }
     public float jumpTime;
     private bool jumpPressed { get; set; }
-    private bool dashPressed { get; set; }
+
+    private bool dashing = false;
+
+    private float dashTime = 0;
+
+    public float dashSpeed;
     
     #endregion
     private void Start()
@@ -39,15 +44,35 @@ public class PlayerController : MonoBehaviour
     public void FixedUpdate()
     {
         Horizontal = Input.GetAxis("Horizontal");
-        Rigidbody2D.velocity = new Vector2(Horizontal * speed, Rigidbody2D.velocity.y);
+        
+
+        if ((Horizontal > 0 && !facingRight) || (Horizontal < 0 && facingRight)) {
+            Flip();
+        }
     }
 
     public void Update()
     {
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            dashTime = 0.2f;
+            dashing = true;
+            Dash();
+        }
+
+        dashTime -= Time.deltaTime;
+        
+        if (Horizontal != 0 && dashTime <= 0)
+        {
+            Rigidbody2D.velocity = new Vector2(Horizontal * speed, Rigidbody2D.velocity.y);
+        }
+        
         if (Horizontal > 0)
         {
             transform.eulerAngles = new Vector3(0, 0, 0);
-        } else if (Horizontal < 0)
+        } 
+        else if (Horizontal < 0)
         {
             transform.eulerAngles = new Vector3(0, 180, 0);
         }
@@ -78,20 +103,46 @@ public class PlayerController : MonoBehaviour
         }
 
         if (Input.GetKeyUp(KeyCode.W))
-        {
             IsJumping = false;
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            Dash();
         }
-        
+            
     }
 
+    public void Dash()
+    {
+        // var vSpeed = new Vector2(200, 0);
+        // if (!facingRight)
+        //     vSpeed = new Vector2(-200, 0);
+        //Rigidbody2D.MovePosition(Rigidbody2D.position + vSpeed);
+            
+        //var dashVector = new Vector2(dashX, dashY);
+        var oldGravity = Rigidbody2D.gravityScale;
+        Rigidbody2D.gravityScale = 0;
+        var vSpeed = new Vector2(dashSpeed, 0);
+        var dashVector = Rigidbody2D.position + vSpeed;
+        if (!facingRight)
+            dashVector *= -1;
+        dashVector.y = 0;
+
+        Rigidbody2D.AddForce(dashVector, ForceMode2D.Impulse);
+        //Rigidbody2D.velocity = Vector2.left * 20;
+        dashing = false;
+        Rigidbody2D.gravityScale = oldGravity;
+    }
+    
     /// <summary>
     /// Move right or left
     /// </summary>
     public void MoveHorizontal()
     {
         if ((Horizontal > 0 && !facingRight) || (Horizontal < 0 && facingRight)) {
-            //Flip();
+            Flip();
         }
+        
         Rigidbody2D.velocity = new Vector2(speed * Horizontal, Rigidbody2D.velocity.y);
     }
     
@@ -146,5 +197,10 @@ public class PlayerController : MonoBehaviour
         RaycastHit2D raycastHit2D = Physics2D.BoxCast(BoxCollider2D.bounds.center, BoxCollider2D.bounds.size, 
             0, Vector2.down, extraHeightText, groundLayer);
         return raycastHit2D.collider != null;
+    }
+    
+    public void Flip()
+    {
+        facingRight = !facingRight;
     }
 }
