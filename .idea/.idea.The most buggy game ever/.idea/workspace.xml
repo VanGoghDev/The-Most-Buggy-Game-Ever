@@ -19,7 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0935352-9277-47c3-b600-7a5307e13a8c" name="Default Changelist" comment="" />
+    <list default="true" id="d0935352-9277-47c3-b600-7a5307e13a8c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.The most buggy game ever/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.The most buggy game ever/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,11 +37,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Models/Abilities.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Models/Interfaces/IPlayableEntity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/JumpCollectible.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Models/PlayableEntity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ParallaxLayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ParallaxCamera.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ParallaxBackground.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
       </list>
     </option>
   </component>
@@ -102,6 +105,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
@@ -115,9 +119,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="577" y="157" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1603489544162" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1603567751100">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1603621085029">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1603567751100" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1603621085029" />
   </component>
 </project>
