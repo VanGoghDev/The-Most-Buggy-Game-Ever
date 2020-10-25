@@ -11,3 +11,6 @@
 | Mass| 20| Масса персонажа|
 |Gravity scale| 9.8 | с какой силой гравитация "тянет" персонажа вниз|
 |Linear drag| 4.16 | |
+
+### Скорее всего, так можно просчитать коллизию самому
+https://docs.unity3d.com/ScriptReference/Physics.Linecast.html
